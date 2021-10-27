@@ -12,7 +12,6 @@ body{
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    position: static;
    /* NUMBER 4 */
   }
 
@@ -83,7 +82,7 @@ body{
     #logo{
       animation-name: example;
       animation-duration: 5s;
-      animation-iteration-count: 1'
+      animation-iteration-count: 1;
     }
 
 
@@ -158,5 +157,4 @@ body{
     }
 
 
-}
   
