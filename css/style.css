@@ -1,0 +1,155 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16pt; /* test for this! Make all sizes em or rem */
+    font-family: 'Alegreya Sans SC', serif;
+    background-color: #f1f1f1;
+    background-image: url(hw6-2021-main/images/concrete_seamless.png);
+  }
+  
+  header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   /* NUMBER 4 */
+  }
+  a:visited{
+    text-decoration: none; 
+  }
+
+  a, a:visited {
+    color: inherit;
+  }
+  /* NUMBER 5 MAYBE INSPECT AND LOOK UP RGBA */
+
+  .nav_links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* NUMBER 6 */
+  }
+
+  /* NUMBER 7 */
+  .card > header{
+    background-color: #288088;
+    border-width: solid 2px;
+    border-color: #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  
+  }
+
+  .pricing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+/* NUMBER 8 */
+  .card{
+    flex-basis: 450px;
+
+  }
+
+  /* 10 */
+  .gallery img{
+    border-width: 10px;
+    border-style: solid;
+    border-color: #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+  .gallery{
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  @keyframes example {
+    /* from {width: 50px; opacity: 0;}
+    to {width: 450px; opacity: 1;} */
+
+    0% {
+      width: 50px; opacity: 0;
+    }
+    100% {
+      width:425px; opacity: 1;
+  }
+}
+    #logo{
+      animation-name: example;
+      animation-duration: 5s;
+      animation-iteration-count: 1'
+    }
+
+
+
+
+  
+  @media screen and (min-width: 850px){
+    /* 12 NUMBER */
+    /* header {
+      position: sticky;
+      top: 0;
+    } */
+    .card{
+      flex-basis: 250px;
+  
+    }
+  }
+  @media (prefers-reduced-motion) {
+    .logo {
+      animation-name: example;
+      animation: none;
+    }
+  }
+
+
+  @media print {
+    body{
+      background-image: none;
+    }
+    .nav_links{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        /* NUMBER 6 */
+      }
+      .pricing{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .card{
+        flex-basis: 250px;
+        border: 2px solid #45ADDD;
+      }
+
+
+      .gallery{
+        display: none;
+      }
+
+
+      .card ul li::before{
+        content: "👍";
+      }
+
+      .card li::after{
+        content: "👍";
+      }
+    }
+
+
+}
+  
