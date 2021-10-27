@@ -20,14 +20,18 @@ body{
   }
   .nav_links{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between;
+    align-items: center; */
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* NUMBER 6 */
   }
 
   /* NUMBER 7 */
+
+  .card{
+    flex-basis: 450px;
+  }
   .card > header{
     background-color: #288088;
     border: 2px solid #45ADAD;
@@ -42,14 +46,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
     flex-wrap: wrap;
   }
 /* NUMBER 8 */
-  .card{
-    flex-basis: 450px;
 
-  }
 
   /* 10 */
   .gallery img{
@@ -88,17 +88,23 @@ body{
 
   
   @media screen and (min-width: 850px){
-    .top-header {
-      flex-direction: row;
+    header {
+      /* flex-direction: row;
       justify-content: space-between;
       position:fixed;
-      width: 100%;
+      width: 100%; */
+
+      flex-direction: row;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
     }
 
     .nav_links {
       flex-direction: row;
     }
     .card{
+      z-index: -99;
       flex-basis: 250px;
     }
   }
@@ -118,7 +124,7 @@ body{
   
     header {
       display: flex;
-      flex-direction: column;
+      align-items: stretch;
     }
     body{
       background-image: none;
@@ -147,13 +153,24 @@ body{
       #gallery{
         display: none;
       }
-      .card ul li::before{
+
+      .card li:nth-of-type(1)::before{
+        content: "👍";
+      }
+      .card li:nth-child(2)::after{
+        content: "👍";
+      }    
+      .card li:nth-of-type(3)::before{
+        content: "👍";
+      }
+      }    
+      /* .card ul li::before{
         content: "👍";
       }
 
       .card li::after{
         content: "👍";
-      }
+      } */
     }
 
 
