@@ -3,25 +3,22 @@ body{
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
     font-family: 'Alegreya Sans SC', serif;
-    background-color: #f1f1f1;
-    background-image: url(hw6-2021-main/images/concrete_seamless.png);
+    background-image: url("../images/concrete_seamless.png");
+    background-color:#f1f1f1;
   }
   
   header{
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
+    position: static;
    /* NUMBER 4 */
   }
-  a:visited{
-    text-decoration: none; 
-  }
 
-  a, a:visited {
-    color: inherit;
+  a:link, a:visited {
+    color: #0000EE;
   }
-  /* NUMBER 5 MAYBE INSPECT AND LOOK UP RGBA */
-
   .nav_links{
     display: flex;
     justify-content: space-between;
@@ -34,8 +31,7 @@ body{
   /* NUMBER 7 */
   .card > header{
     background-color: #288088;
-    border-width: solid 2px;
-    border-color: #45ADAD;
+    border: 2px solid #45ADAD;
     padding-top: 20px;
     padding-bottom: 20px;
     border-top-left-radius: 7px;
@@ -91,20 +87,23 @@ body{
     }
 
 
-
-
   
   @media screen and (min-width: 850px){
-    /* 12 NUMBER */
-    /* header {
-      position: sticky;
-      top: 0;
-    } */
+    .top-header {
+      flex-direction: row;
+      justify-content: space-between;
+      position:fixed;
+      width: 100%;
+    }
+
+    .nav_links {
+      flex-direction: row;
+    }
     .card{
       flex-basis: 250px;
-  
     }
   }
+    
   @media (prefers-reduced-motion) {
     .logo {
       animation-name: example;
@@ -112,8 +111,16 @@ body{
     }
   }
 
-
   @media print {
+
+    .thumb {
+      display: inline; 
+    }
+  
+    header {
+      display: flex;
+      flex-direction: column;
+    }
     body{
       background-image: none;
     }
@@ -125,22 +132,22 @@ body{
       }
       .pricing{
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
       }
       .card{
         flex-basis: 250px;
         border: 2px solid #45ADDD;
       }
 
-
       .gallery{
         display: none;
       }
 
-
+      #gallery{
+        display: none;
+      }
       .card ul li::before{
         content: "👍";
       }
